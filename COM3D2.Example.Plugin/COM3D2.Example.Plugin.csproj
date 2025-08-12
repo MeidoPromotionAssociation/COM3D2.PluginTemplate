@@ -1,0 +1,108 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Choose>
+    <!-- Configure COM3D2 related dependencies -->
+    <When Condition="$(Configuration.Contains('COM3D2-'))">
+      <ItemGroup>
+        <PackageReference Include="UnityEngine.Modules" IncludeAssets="compile"
+          Version="5.6.4"/>
+        <PackageReference Include="COM3D2.GameLibs" IncludeAssets="compile"
+          Version="2.44.1-r.0"/>
+        <PackageReference Include="BepInEx.Analyzers" PrivateAssets="all" Version="1.*"/>
+        <PackageReference Include="BepInEx.Core" Version="5.*"/>
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*"/>
+      </ItemGroup>
+    </When>
+
+
+    <!-- Configure COM3D2.5 related dependencies -->
+    <When Condition="$(Configuration.Contains('COM3D25_UNITY_2022-'))">
+      <ItemGroup>
+        <PackageReference Include="UnityEngine.Modules" IncludeAssets="compile"
+          Version="2022.3.35"/>
+        <PackageReference Include="COM3D2.GameLibs" IncludeAssets="compile"
+          Version="3.44.1-r.0"/>
+        <PackageReference Include="BepInEx.Analyzers" PrivateAssets="all" Version="1.*"/>
+        <PackageReference Include="BepInEx.Core" Version="5.*"/>
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*"/>
+      </ItemGroup>
+    </When>
+  </Choose>
+
+  <Choose>
+    <!-- COM3D2 related configuration -->
+    <When Condition="'$(Configuration)|$(Platform)' == 'COM3D2-Debug|AnyCPU'">
+      <PropertyGroup>
+        <AssemblyName>COM3D2.Example.Plugin</AssemblyName>
+        <AssemblyTitle>COM3D2.Example.Plugin COM3D2</AssemblyTitle>
+        <DefineConstants>COM3D2;DEBUG;TRACE</DefineConstants>
+        <Deterministic>true</Deterministic>
+        <ErrorReport>prompt</ErrorReport>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\COM3D2\</OutputPath>
+        <TargetFramework>net35</TargetFramework>
+        <WarningLevel>4</WarningLevel>
+      </PropertyGroup>
+    </When>
+    <When Condition="'$(Configuration)|$(Platform)' == 'COM3D2-Release|AnyCPU'">
+      <PropertyGroup>
+        <AssemblyName>COM3D2.Example.Plugin</AssemblyName>
+        <AssemblyTitle>COM3D2.Example.Plugin COM3D2</AssemblyTitle>
+        <DefineConstants>COM3D2</DefineConstants>
+        <Deterministic>true</Deterministic>
+        <ErrorReport>prompt</ErrorReport>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\COM3D2\</OutputPath>
+        <TargetFramework>net35</TargetFramework>
+        <WarningLevel>4</WarningLevel>
+      </PropertyGroup>
+    </When>
+
+    <!-- COM3D2.5 related configuration -->
+    <When Condition="'$(Configuration)|$(Platform)' == 'COM3D25_UNITY_2022-Debug|AnyCPU'">
+      <PropertyGroup>
+        <AssemblyName>COM3D25.Example.Plugin</AssemblyName>
+        <AssemblyTitle>COM3D25.Example.Plugin COM3D2.5 Unity2022.3</AssemblyTitle>
+        <DefineConstants>COM3D25_UNITY_2022;DEBUG;TRACE</DefineConstants>
+        <Deterministic>true</Deterministic>
+        <ErrorReport>prompt</ErrorReport>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\COM3D25\</OutputPath>
+        <TargetFramework>net48</TargetFramework>
+        <WarningLevel>4</WarningLevel>
+      </PropertyGroup>
+    </When>
+    <When Condition="'$(Configuration)|$(Platform)' == 'COM3D25_UNITY_2022-Release|AnyCPU'">
+      <PropertyGroup>
+        <AssemblyName>COM3D25.Example.Plugin</AssemblyName>
+        <AssemblyTitle>COM3D25.Example.Plugin COM3D2.5 Unity2022.3</AssemblyTitle>
+        <DefineConstants>COM3D25_UNITY_2022</DefineConstants>
+        <Deterministic>true</Deterministic>
+        <ErrorReport>prompt</ErrorReport>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\COM3D25\</OutputPath>
+        <TargetFramework>net48</TargetFramework>
+        <WarningLevel>4</WarningLevel>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" PrivateAssets="all"
+      Version="1.0.3"/>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Configurations>COM3D2-Debug;COM3D2-Release;COM3D25_UNITY_2022-Debug;COM3D25_UNITY_2022-Release</Configurations>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <LangVersion>latest</LangVersion>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+      https://nuget.samboy.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <RootNamespace>COM3D2.Example.Plugin</RootNamespace>
+  </PropertyGroup>
+
+</Project>
