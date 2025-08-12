@@ -11,6 +11,11 @@
  2) After first run, edit the generated config at BepInEx/config/Github.yourName.COM3D2.Example.Plugin.cfg
  3) Default hotkey: Ctrl + F6 to toggle the demo UI
 
+ for more information, see:
+ - https://docs.bepinex.dev/articles/index.html
+ - https://docs.bepinex.dev/api/index.html
+ - https://harmony.pardeike.net/articles/intro.html
+
  示例插件：展示
  - BepInEx 配置（Config.Bind / KeyboardShortcut / AcceptableValueRange / 热重载）
  - 条件编译兼容 COM3D2 (2.0) 与 COM3D2.5 (Unity 2022.3)
@@ -22,6 +27,11 @@
     - COM3D25_UNITY_2022-Debug / COM3D25_UNITY_2022-Release -> 2.5（Unity 2022.3）
  2) 首次运行后在 BepInEx/config/Github.yourName.COM3D2.Example.Plugin.cfg 中修改配置
  3) 默认快捷键：Ctrl + F6 切换示例 UI
+
+更多信息，请参阅：
+ - https://docs.bepinex.dev/articles/index.html
+ - https://docs.bepinex.dev/api/index.html
+ - https://harmony.pardeike.net/articles/intro.html
 */
 
 using BepInEx;
