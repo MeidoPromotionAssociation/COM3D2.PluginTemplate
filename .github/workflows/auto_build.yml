@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  push:
+    branches: [ "master","main" ]
+  pull_request:
+    branches: [ "master","main" ]
+
+
+jobs:
+  build:
+    runs-on: Ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.x'
+
+      - name: Build COM3D2
+        run: |
+          dotnet build -c COM3D2-Release
+
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: COM3D2.Example.Plugin.zip
+          path: |
+            /home/runner/work/COM3D2.PluginTemplate/COM3D2.PluginTemplate/COM3D2.Example.Plugin/bin/Release/COM3D2/net35/COM3D2.Example.Plugin.dll
+
+      - name: Build COM3D2.5
+        run: |
+          dotnet build -c COM3D25_UNITY_2022-Release
+
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: COM3D25.Example.Plugin.zip
+          path: |
+            /home/runner/work/COM3D2.PluginTemplate/COM3D2.PluginTemplate/COM3D2.Example.Plugin/bin/Release/COM3D25/net48/COM3D25.Example.Plugin.dll
