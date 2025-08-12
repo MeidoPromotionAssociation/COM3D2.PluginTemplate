@@ -16,6 +16,7 @@ Readme written by GPT-5 high
 - HarmonyLib patch example (prefix patch on ImportCM.LoadTexture)
 - Conditional compilation for 2.0 vs 2.5 (Unity 2022.3) with dedicated build configs
 - Unified logging via ManualLogSource
+- Demonstrates how to use Github Action to automatically build plugins
 
 
 
@@ -158,6 +159,7 @@ Readme 由 GPT-5 high 编写
 - HarmonyLib 补丁示例（对 ImportCM.LoadTexture 的前缀补丁日志）
 - 面向 2.0 与 2.5（Unity 2022.3）的条件编译与独立构建配置
 - 使用 ManualLogSource 统一日志输出
+- 演示如何使用 Github Action 自动构建插件
 
 
 
