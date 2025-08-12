@@ -7,7 +7,7 @@
 
 A ready-to-use template for creating BepInEx plugins for COM3D2 (2.0, Unity 5.6.4) and COM3D2.5 (Unity 2022.3). It includes config binding, a sample IMGUI UI, a demo hotkey, Harmony patches, and conditional compilation.
 
----
+Readme written by GPT-5 high
 
 ## Features
 
@@ -16,8 +16,9 @@ A ready-to-use template for creating BepInEx plugins for COM3D2 (2.0, Unity 5.6.
 - HarmonyLib patch example (prefix patch on ImportCM.LoadTexture)
 - Conditional compilation for 2.0 vs 2.5 (Unity 2022.3) with dedicated build configs
 - Unified logging via ManualLogSource
+- Demonstrates how to use Github Action to automatically build plugins
 
----
+
 
 ## Project layout
 
@@ -26,7 +27,7 @@ A ready-to-use template for creating BepInEx plugins for COM3D2 (2.0, Unity 5.6.
 - `COM3D2.Example.Plugin/COM3D2.Example.Plugin.csproj` — build matrix and NuGet deps
 - `COM3D2.Example.Plugin.sln` — solution file
 
----
+
 
 ## Requirements
 
@@ -36,7 +37,7 @@ A ready-to-use template for creating BepInEx plugins for COM3D2 (2.0, Unity 5.6.
 - .NET SDK 9 (recommended)
 - Internet access to restore NuGet packages
 
----
+
 
 ## Build
 
@@ -50,7 +51,7 @@ A ready-to-use template for creating BepInEx plugins for COM3D2 (2.0, Unity 5.6.
 
 NuGet feeds used are already declared in the csproj for Unity and COM3D2 game libs.
 
----
+
 
 ## Install
 
@@ -59,14 +60,14 @@ NuGet feeds used are already declared in the csproj for Unity and COM3D2 game li
 - Launch the game once; the config will be generated at:
   - `BepInEx/config/Github.yourName.COM3D2.Example.Plugin.cfg`
 
----
+
 
 ## Usage
 
 - Default hotkey: press `Ctrl + F6` to toggle the demo IMGUI panel
 - Watch the console or `BepInEx/LogOutput.log` for messages
 
----
+
 
 ## Config entries
 
@@ -80,7 +81,7 @@ Section `[Shortcut]`:
 
 After editing and saving the cfg, hot reload is triggered via `Config.SettingChanged`.
 
----
+
 
 ## Harmony patch
 
@@ -88,14 +89,14 @@ After editing and saving the cfg, hot reload is triggered via `Config.SettingCha
 - Patch: prefix on `ImportCM.LoadTexture(...)`
 - Behavior: logs the texture file being loaded; it does not block the original method
 
----
+
 
 ## Conditional compilation
 
 - `#if COM3D25_UNITY_2022` branches implement version-specific logic
 - Build configs define symbols automatically based on selection
 
----
+
 
 ## Development notes
 
@@ -104,7 +105,7 @@ After editing and saving the cfg, hot reload is triggered via `Config.SettingCha
 - Patch registration: `Harmony.CreateAndPatchAll(typeof(Patch1), "Github.yourName.COM3D2.Example.Plugin.Patch1")`
 - UI: simple IMGUI with HiDPI scaling helper
 
----
+
 
 ## Troubleshooting
 
@@ -112,7 +113,7 @@ After editing and saving the cfg, hot reload is triggered via `Config.SettingCha
 - Check the log for: `COM3D2.Example.Plugin is loaded!` and Unity/game version prints.
 - NuGet restore failed? Ensure network access; csproj already lists the required feeds.
 
----
+
 
 ## Plugin identity
 
@@ -120,7 +121,7 @@ After editing and saving the cfg, hot reload is triggered via `Config.SettingCha
 - Name: `COM3D2.Example.Plugin`
 - Version: `0.0.1`
 
----
+
 
 ## License
 
@@ -149,7 +150,7 @@ The Unlicense
 
 一个可直接上手的 BepInEx 插件模板，兼容 COM3D2（2.0，Unity 5.6.4）与 COM3D2.5（Unity 2022.3）。内置配置绑定示例、IMGUI 示例界面、演示用快捷键、Harmony 补丁以及条件编译分支。
 
----
+Readme 由 GPT-5 high 编写
 
 ## 功能特性
 
@@ -158,8 +159,9 @@ The Unlicense
 - HarmonyLib 补丁示例（对 ImportCM.LoadTexture 的前缀补丁日志）
 - 面向 2.0 与 2.5（Unity 2022.3）的条件编译与独立构建配置
 - 使用 ManualLogSource 统一日志输出
+- 演示如何使用 Github Action 自动构建插件
 
----
+
 
 ## 工程结构
 
@@ -168,7 +170,7 @@ The Unlicense
 - `COM3D2.Example.Plugin/COM3D2.Example.Plugin.csproj` — 构建矩阵和 NuGet 依赖项
 - `COM3D2.Example.Plugin.sln` — 解决方案文件
 
----
+
 
 ## 环境要求
 
@@ -178,7 +180,7 @@ The Unlicense
 - .NET SDK 9 (推荐)
 - 可联网以恢复 NuGet 包
 
----
+
 
 ## 构建
 
@@ -192,7 +194,7 @@ The Unlicense
 
 csproj 已声明 Unity 与 COM3D2 相关 NuGet 源，构建时会自动还原依赖。
 
----
+
 
 ## 安装
 
@@ -201,14 +203,14 @@ csproj 已声明 Unity 与 COM3D2 相关 NuGet 源，构建时会自动还原依
 - 启动游戏一次，配置文件将生成于：
     - `BepInEx/config/Github.yourName.COM3D2.Example.Plugin.cfg`
 
----
+
 
 ## 使用方法
 
 - 默认快捷键：按下 `Ctrl + F6` 切换示例 IMGUI 面板
 - 可在控制台或 `BepInEx/LogOutput.log` 查看日志输出
 
----
+
 
 ## 配置项
 
@@ -222,7 +224,7 @@ csproj 已声明 Unity 与 COM3D2 相关 NuGet 源，构建时会自动还原依
 
 编辑并保存配置文件后，将通过 `Config.SettingChanged` 触发热重载。
 
----
+
 
 ## Harmony 补丁
 
@@ -230,14 +232,14 @@ csproj 已声明 Unity 与 COM3D2 相关 NuGet 源，构建时会自动还原依
 - 补丁：对 `ImportCM.LoadTexture(...)` 的前缀补丁
 - 行为：记录被加载的纹理文件，不阻止原方法执行
 
----
+
 
 ## 条件编译
 
 - 通过 `#if COM3D25_UNITY_2022` 分支实现版本差异逻辑
 - 根据所选构建配置自动定义编译常量
 
----
+
 
 ## Development notes | 开发提示
 
@@ -246,7 +248,7 @@ csproj 已声明 Unity 与 COM3D2 相关 NuGet 源，构建时会自动还原依
 - 补丁注册：`Harmony.CreateAndPatchAll(typeof(Patch1), "Github.yourName.COM3D2.Example.Plugin.Patch1")`
 - UI：简易 IMGUI，提供 HiDPI 缩放辅助
 
----
+
 
 ## Troubleshooting | 常见问题
 
@@ -262,4 +264,3 @@ csproj 已声明 Unity 与 COM3D2 相关 NuGet 源，构建时会自动还原依
 - 名称：`COM3D2.Example.Plugin`
 - 版本：`0.0.1`
 
----
