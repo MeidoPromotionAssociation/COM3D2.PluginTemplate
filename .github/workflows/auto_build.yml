@@ -26,7 +26,7 @@ jobs:
       - name: Publish Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: COM3D2.Example.Plugin.zip
+          name: COM3D2.Example.Plugin
           path: |
             /home/runner/work/COM3D2.PluginTemplate/COM3D2.PluginTemplate/COM3D2.Example.Plugin/bin/Release/COM3D2/net35/COM3D2.Example.Plugin.dll
 
@@ -37,6 +37,6 @@ jobs:
       - name: Publish Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: COM3D25.Example.Plugin.zip
+          name: COM3D25.Example.Plugin
           path: |
             /home/runner/work/COM3D2.PluginTemplate/COM3D2.PluginTemplate/COM3D2.Example.Plugin/bin/Release/COM3D25/net48/COM3D25.Example.Plugin.dll
