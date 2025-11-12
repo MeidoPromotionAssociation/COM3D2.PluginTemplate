@@ -34,7 +34,7 @@ Readme written by GPT-5 high
 - Game: COM3D2 or COM3D2.5 (Unity 2022.3)
 - BepInEx 5.x installed in the game directory
 - JetBrains Rider (recommended) or Visual Studio
-- .NET SDK 9 (recommended)
+- .NET SDK 10 (recommended)
 - Internet access to restore NuGet packages
 
 
@@ -177,7 +177,7 @@ Readme 由 GPT-5 high 编写
 - 游戏：COM3D2 或 COM3D2.5（Unity 2022.3）
 - 游戏目录已安装 BepInEx 5.x
 - JetBrains Rider (推荐) 或 Visual Studio
-- .NET SDK 9 (推荐)
+- .NET SDK 10 (推荐)
 - 可联网以恢复 NuGet 包
 
 
