@@ -52,6 +52,12 @@ Readme written by GPT-5 high
 NuGet feeds used are already declared in the csproj for Unity and COM3D2 game libs.
 
 
+## Dependency Libraries
+
+- While you can directly obtain the required libraries `Assembly-CSharp.dll` and `Assembly-CSharp-firstpass.dll` from the game's installation folder, you should not upload them to GitHub or similar sites.
+- For automated builds and compliance, packages have been uploaded to BepinEx's NuGet repository [https://nuget.bepinex.dev](https://nuget.bepinex.dev/packages/com3d2.gamelibs) which you can [obtain](https://nuget.bepinex.dev/packages/com3d2.gamelibs) directly from this repository. This template is configured to use it.
+- You can also obtain libraries such as UnityEngine.Modules from this NuGet repository.
+
 
 ## Install
 
@@ -195,6 +201,11 @@ Readme 由 GPT-5 high 编写
 csproj 已声明 Unity 与 COM3D2 相关 NuGet 源，构建时会自动还原依赖。
 
 
+## Dependency libraries | 依赖库
+
+- 虽然你可以从游戏安装文件夹内直接所需的库 `Assembly-CSharp.dll` `Assembly-CSharp-firstpass.dll` 但是你并不应该将其上传至 Github 等地。
+- 为了自动构建与合规，有人在 BepinEx 的 [Nuget](https://nuget.bepinex.dev) 仓库上上传了包，你可以直接从那里[获取](https://nuget.bepinex.dev/packages/com3d2.gamelibs)本模板已配置使用。
+- 你也可以在该 Nuget 仓库获取到 UnityEngine.Modules 库等。
 
 ## 安装
 
@@ -249,7 +260,6 @@ csproj 已声明 Unity 与 COM3D2 相关 NuGet 源，构建时会自动还原依
 - UI：简易 IMGUI，提供 HiDPI 缩放辅助
 
 
-
 ## Troubleshooting | 常见问题
 
 - 插件未加载？请确认根据游戏版本选择了正确的构建配置，并将 dll 放入 `BepInEx/plugins/`。
@@ -263,4 +273,3 @@ csproj 已声明 Unity 与 COM3D2 相关 NuGet 源，构建时会自动还原依
 - 插件 ID：`Github.yourName.COM3D2.Example.Plugin`
 - 名称：`COM3D2.Example.Plugin`
 - 版本：`0.0.1`
-
